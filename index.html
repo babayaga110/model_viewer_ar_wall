@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>3D Model Viewer</title>
     <!-- Import the model-viewer component -->
@@ -12,7 +13,9 @@
     ></script>
     <!-- Add some basic CSS to ensure the viewer has space to render -->
     <style>
-   
+   *{
+    box-sizing: border-box;
+   }
    body{
     margin: 0;
     padding: 0;
@@ -107,16 +110,13 @@
 
   .slider {
     width: 100%;
-    text-align: center;
-    overflow: hidden;
     position: absolute;
     bottom: 16px;
-    left: 0;
   }
 
   .slides {
+    width: 100%;
     display: flex;
-    justify-content: center;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
@@ -152,7 +152,7 @@
     </style>
   </head>
   <body>
-    <model-viewer src="./assets/Chair.glb" poster="./assets/Chair.webp" shadow-intensity="1" ar camera-controls touch-action="pan-y" alt="A 3D model carousel">
+    <model-viewer src="./assets/Chair.glb" poster="./assets/Chair.webp" shadow-intensity="1" ar camera-controls touch-action="pan-y" alt="A 3D model carousel" >
   
       <button slot="ar-button" id="ar-button">
         View in your space
