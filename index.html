@@ -13,6 +13,12 @@
     <!-- Add some basic CSS to ensure the viewer has space to render -->
     <style>
    
+   body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+   }
 
   
       /* This keeps child nodes hidden while the element loads */
@@ -23,10 +29,12 @@
   model-viewer {
     background-color: #eee;
     overflow-x: hidden;
+    width: 100%;
+    height: 100%;
   }
 
   #ar-button {
-    background-image: url(../../assets/ic_view_in_ar_new_googblue_48dp.png);
+    background-image: url(./assets/ic_view_in_ar_new_googblue_48dp.png);
     background-repeat: no-repeat;
     background-size: 20px 20px;
     background-position: 12px 50%;
@@ -106,6 +114,7 @@
 
   .slides {
     display: flex;
+    justify-content: center;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
